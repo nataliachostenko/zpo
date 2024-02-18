@@ -1,0 +1,41 @@
+﻿
+@{
+    List<Object> menuItems = new List<Object>();
+
+    menuItems.Add(new
+    {
+        text = "Strona główna",
+        url = "/",
+        iconCss = "bi bi-house-door-fill",
+    });
+    menuItems.Add(new
+    {
+        text = "Kategorie",
+        url = "/Category",
+        iconCss = "bi bi-list-check"
+    });
+    menuItems.Add(new
+    {
+        text = "Transakcje",
+        iconCss = "fa-solid fa-arrow-right-arrow-left",
+        url = "/Transaction"
+    });
+
+    
+}
+
+<ejs-sidebar id="sidebar" width="290px" enableDock dockSize="100px"
+             target=".dock-target" enableGestures="false">
+    <e-content-template>
+
+        <ejs-menu id="menu"
+                  items="menuItems"
+                  orientation="Vertical"
+                  hamburgerMode></ejs-menu>
+    </e-content-template>
+</ejs-sidebar>
+
+<script>document.addEventListener('DOMContentLoaded', function () {
+        dockBar = document.getElementById('sidebar').ej2_instances[0];
+        };
+    });</script>

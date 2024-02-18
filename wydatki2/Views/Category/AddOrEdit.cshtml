@@ -1,0 +1,40 @@
+﻿@model wydatki2.Models.Category
+
+@{
+    ViewData["PageTitle"] = Model.CategoryId == 0 ? "Nowa kategoria" : "Edytuj kategorię";
+}
+
+<div class="row mb-3">
+    <div class="col">
+        <a class="btn btn-primary" href="@Url.Action("Idx", "Category")">Powrót do listy kategorii</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-7">
+        <div class="widget p-5" style="background-color: #e0e0e0">
+            <form asp-action="AddOrEdit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" name="CategoryId" value="@Model.CategoryId" />
+                <div class="mb-3">
+                    <div class='e-btn-group custom-rbt-group'>
+                        <input type="radio" id="radioleft" name="Type" value="Expense" checked="@(Model.Type=="Expense")" />
+                        <label class="e-btn" for="radioleft">Wydatek</label>
+                        <input type="radio" id="radiomiddle" name="Type" value="Income" checked="@(Model.Type=="Income")" />
+                        <label class="e-btn" for="radiomiddle">Przychód</label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <ejs-textbox id="title" placeholder="Tytuł" ejs-for="Title" floatLabelType="Always"></ejs-textbox>
+                    <span asp-validation-for="Title" class="text-danger fs-6"></span>
+                </div>
+                <div class="mb-3">
+                    <ejs-textbox id="icon" placeholder="Ikonka/Podtytuł" ejs-for="Icon" floatLabelType="Always"></ejs-textbox>
+                </div>
+                <ejs-button id="submit" type="submit" content="Potwierdź" cssClass="e-success"></ejs-button>
+            </form>
+        </div>
+
+
+    </div>
+</div>

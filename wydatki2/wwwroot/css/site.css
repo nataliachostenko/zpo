@@ -1,0 +1,333 @@
+﻿html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 18px; 
+    }
+}
+
+
+html {
+    position: relative;
+    min-height: 100%;
+    font-family: "Inter";
+}
+
+*:not(.fa-solid):not(.fa):not(.e-icons) {
+    font-family: "Inter"
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #f0f0f0;
+    color: #333333;
+    overflow: hidden;
+}
+
+.e-bigger {
+    font-size: x-large;
+}
+
+.main-content {
+    margin-left: 290px;
+    overflow-y: auto;
+    height: 92vh;
+}
+
+
+/*przycisk*/
+.btn:focus, .btn:active {
+    outline: none !important;
+    box-shadow: none;
+}
+
+/*Hyperlink*/
+.no-a-decoration, .no-a-decoration:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*Grid*/
+.e-grid {
+    border: 0;
+    border-radius: 5px;
+}
+
+/*kolor widgetu na dole*/
+    .e-grid .e-gridcontent, .e-grid .e-table {
+        background-color: #e0e0e0;
+    }
+
+    /*kolor obramówki do widgetu na dole*/
+    .e-grid .e-gridheader {
+        border: 5px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        padding: 10px;
+        background-color: #e0e0e0;
+    }
+
+    /*kolor paska widgetu na dole*/
+        .e-grid .e-gridheader .e-headercell {
+            background-color: #e0e0e0;
+        }
+
+    /*pasek na dole w kategoriach i transakcjach*/
+    .e-grid .e-gridpager {
+        background-color: #e0e0e0;
+    }
+
+    /*kolor oznaczenia ktora strona w kategoriach*/
+    .e-grid .e-pagercontainer {
+        border: none;
+        background-color: #e0e0e0;
+    }
+
+    .e-grid .e-content table {
+        padding: 0px 10px;
+    }
+    /*dalej oznaczenia strony*/
+.e-pagercontainer .e-icons {
+    background-color: #e0e0e0;
+    border: none !important;
+}
+
+
+/*numerek strony*/
+    .e-pager .e-numericitem:not(.e-currentitem) {
+        border: none !important;
+    }
+
+
+.e-pager .e-numericitem.e-currentitem {
+    color: #333333;
+    border: none !important;
+    background-color: #e0e0e0;
+}
+
+.e-grid .e-pager {
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+
+/*Radio buttony*/
+.e-btn-group.custom-rbt-group {
+    width: 100%;
+}
+
+    .e-btn-group.custom-rbt-group .e-btn {
+        width: 50%;
+    }
+
+    /*kategoria - wybor wydatek czy przychód*/
+.custom-rbt-group label.e-btn {
+    box-shadow: none !important;
+    border: 1px solid #333333;
+    background-color: #333333;
+    color: #fff;
+}
+
+.e-btn-group.custom-rbt-group input:checked + label.e-btn {
+    background-color: #fff;
+    color: #212b36;
+    border: 1px solid #fff;
+}
+
+/*SideBar*/
+#sidebar {
+    background-color: #e0e0e0; 
+    border-right: 1px dashed rgba(75,82,85,0.24);
+    padding: 10px 20px;
+    overflow: hidden;
+}
+
+
+    #sidebar .e-menu-wrapper {
+        width: 100%;
+        background-color: inherit;
+    }
+
+#sidebar.e-close {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+
+
+#sidebar.e-sidebar.e-right.e-close {
+    visibility: visible;
+    transform: translateX(0%);
+}
+
+
+.e-grid .e-pagercontainer .e-prev.e-disable,
+.e-grid .e-pagercontainer .e-next.e-disable {
+    background-color: #e0e0e0; 
+    color: #bababa; 
+}
+
+/* Dla nieaktywnych strzałek na krańcach */
+.e-grid .e-pagercontainer .e-first.e-disable,
+.e-grid .e-pagercontainer .e-last.e-disable {
+    background-color: #e0e0e0; 
+    color: #bababa; 
+}
+
+/* Dla nieaktywnych strzałek poprzedniej i następnej strony */
+.e-grid .e-pagercontainer .e-prev.e-disable,
+.e-grid .e-pagercontainer .e-next.e-disable {
+    background-color: #e0e0e0; 
+    color: #bababa; 
+}
+
+/*Widget*/
+.widget {
+    border-radius: 1rem;
+    background-color: #e0e0e0; /* Tło widgetów */
+}
+
+    .widget.summary > div:first-child {
+        background-color: #ffe9f4;
+        padding: 1rem;
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+    }
+
+        .widget.summary > div:first-child i,
+        .widget.income > div:first-child i,
+        .widget.expense > div:first-child i,
+        .widget.balance > div:first-child i {
+            color: #333333; 
+            font-weight: bold; 
+        }
+
+    .widget.income > div:first-child,
+    .widget.expense > div:first-child,
+    .widget.balance > div:first-child {
+        color: #333333; 
+    }
+
+    .widget.chart {
+        padding: 5px; 
+    }
+
+/* Styl dla przycisku Nowa kategoria */
+.btn-success {
+    background-color: #ffe9f4;
+    color: #000000;
+    border-color: #ffe9f4;
+}
+
+    /* Styl dla hovera przycisku  Nowa kategoria */
+    .btn-success:hover {
+        background-color: #ffc0cb;
+        color: #000000;
+        border-color: #ffc0cb;
+    }
+
+
+/* ikona śmietnika */
+.fa-trash-can {
+    color: #333333 !important;
+}
+
+/* etykieta Expense */
+.badge.bg-danger {
+    background-color: #e0e0e0 !important; 
+    color: #333333 !important; 
+}
+
+/* etykieta Income */
+.badge.bg-success {
+    background-color: #e0e0e0 !important;
+    color: #333333 !important; 
+}
+
+
+#submit {
+    background-color: #ffc0cb !important;
+    color: #000000 !important;
+    border-color: #ffc0cb !important;
+}
+
+
+    #submit:hover {
+        background-color: #ffe9f4 !important;
+        color: #000000 !important;
+        border-color: #ffe9f4 !important;
+    }
+
+
+.large-icon {
+    font-size: 4rem; 
+}
+
+#spline-chart_chart_legend_text_0,
+#spline-chart_chart_legend_text_1,
+#spline-chart1_AxisLabel_1,
+#spline-chart0_AxisLabel_0,
+#doughnutchart_datalabel_Series_0_text_0,
+#spline-chart1_AxisLabel_2,
+#spline-chart1_AxisLabel_3,
+#spline-chart1_AxisLabel_4,
+#spline-chart1_AxisLabel_5,
+#spline-chart1_AxisLabel_6,
+#spline-chart1_AxisLabel_7,
+#spline-chart0_AxisLabel_1,
+#spline-chart0_AxisLabel_2,
+#spline-chart0_AxisLabel_3,
+#spline-chart0_AxisLabel_4,
+#spline-chart0_AxisLabel_5,
+#spline-chart0_AxisLabel_6,
+#spline-chart0_AxisLabel_7,
+#spline-chart0_AxisLabel_8,
+#doughnutchart_datalabel_Series_0_text_0,
+#doughnutchart_datalabel_Series_0_text_1
+{
+    font-family: 'Inter', sans-serif !important;
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    color: rgb(51, 51, 51);
+    text-anchor: start;
+}
+
+
+#spline-chart_chart_legend_text_0 {
+    transform: translateX(-4px); 
+}
+
+#spline-chart_chart_legend_text_0,
+#spline-chart_chart_legend_text_1 {
+    font-size: 14px !important; 
+}
+
+.income > div > h1,
+.expense > div > h1,
+.balance > div > h1 {
+    font-size: 1.5rem !important; 
+}
+
+.btn {
+    background-color: #ffc0cb;
+    border-color: #ffc0cb !important;
+    color: black;
+}
+
+    .btn:hover {
+        background-color: #ffe9f4;
+        border-color: #ffe9f4 !important;
+        color: black;
+    }
+
+
+
+
+
+
